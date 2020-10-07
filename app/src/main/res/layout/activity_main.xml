@@ -4,78 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0A8AF1"
+    android:backgroundTint="#2196F3"
     tools:context="com.example.covid.MainActivity">
 
     <TextView
-        android:id="@+id/have"
-        android:layout_width="343dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginEnd="36dp"
-        android:text="Have you experienced any of these symtoms in the last 10 days?"
-        android:textColor="#000000"
+        android:id="@+id/text_Main"
+        android:layout_width="298dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="34dp"
+        android:text="Have you had any of these symptoms ?"
+        android:textColor="#F10808"
         android:textColorLink="#FFFFFF"
-        android:textSize="30sp"
+        android:textSize="32dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Fever"
+        android:id="@+id/textViewOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="144dp"
-        android:text="Fever"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="96dp"
+        android:text="Do you have a fever?"
+        android:textColor="#EC0909"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/have" />
+        app:layout_constraintTop_toBottomOf="@+id/text_Main" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="143dp"
-        android:text="Chills"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="100dp"
+        android:text="Do you have aches?"
+        android:textColor="#ED0707"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Fever" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewOne" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="64dp"
+        android:text="Do you have a sore throat?"
+        android:textColor="#F10909"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTwo" />
+
+    <TextView
+        android:id="@+id/textViewFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="88dp"
-        android:text="Dry Throat"
+        android:text="Do you have a cough?"
+        android:textColor="#ED0909"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewThree" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="133dp"
-        android:text="Cough"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="92dp"
+        android:text="Have you thrown up?"
+        android:textColor="#EF0909"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="16dp"
-        android:text="Sure about fever?"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFour" />
 
     <EditText
         android:id="@+id/editText_main"
@@ -86,12 +93,13 @@
         android:ems="10"
         android:hint="@string/message"
         android:inputType="textPersonName"
+        android:textColor="#ED0A0A"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.74" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewFive"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/button"
@@ -99,82 +107,92 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
         android:layout_marginEnd="163dp"
-        android:layout_marginBottom="52dp"
-        android:text="Submit"
+        android:layout_marginBottom="16dp"
         android:onClick="launchSecondActivity"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/checkBoxOne"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="44dp"
+        android:background="#FFEB3B"
         android:checked="false"
-        app:layout_constraintEnd_toEndOf="@+id/have"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:outlineAmbientShadowColor="#FFEB3B"
+        android:outlineSpotShadowColor="#FFEB3B"
+        android:shadowColor="#FFEB3B"
+        android:textColor="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="@+id/text_Main"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHonest" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewHonest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="13dp"
-        android:text="Check if True"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:text="Please answer honestly"
+        android:textColor="#EC0808"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/have" />
+        app:layout_constraintTop_toBottomOf="@+id/text_Main" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/checkBoxTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/have"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="48dp"
+        android:background="#FFEB3B"
+        android:backgroundTint="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="@+id/text_Main"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxOne" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/checkBoxThree"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/have"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="56dp"
+        android:background="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="@+id/text_Main"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxTwo" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/checkBoxFour"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintEnd_toEndOf="@+id/have"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="68dp"
+        android:background="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="@+id/text_Main"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxThree" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/checkBoxFive"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/have"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="60dp"
+        android:background="#FFEB3B"
+        app:layout_constraintEnd_toEndOf="@+id/text_Main"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFour" />
 </androidx.constraintlayout.widget.ConstraintLayout>

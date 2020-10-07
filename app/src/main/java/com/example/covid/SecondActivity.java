@@ -24,10 +24,5 @@ public class SecondActivity extends MainActivity{
     }
 
 
-    public void launchthird(View view) {
 
-
-        Intent intent= new Intent(this, third.class);
-        startActivity(intent);
-    }
 }

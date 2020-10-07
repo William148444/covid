@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class actvivity_second extends AppCompatActivity {
+public class
+actvivity_second extends AppCompatActivity {
 
     TextView textView;
     String main = " ";
@@ -23,16 +25,17 @@ public class actvivity_second extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         textView = findViewById(R.id.text_message);
+
         Intent intent = getIntent();
         message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         Boolean Name = intent.getBooleanExtra("name",false);
         listOfSymptoms = intent.getStringArrayListExtra("ListOfSymptoms");
         Boolean school = intent.getBooleanExtra("School1", true);
         System.out.println(Name.toString());
-        //if to see if there is something in text box
-        if (Name == true) {
+
+        if (Name == true) { // checks if message is in text  box
             if (message == null)
-                textView.setText("???? null");
+                textView.setText("null");
             else {
                 for (int i = 0; i < listOfSymptoms.size(); i++) {
                     main += listOfSymptoms.get(i) + ", ";
@@ -57,10 +60,7 @@ public class actvivity_second extends AppCompatActivity {
     public void launchthird(View view){
 
 
-        Intent intent= new Intent(this, third.class);
-        intent.putExtra("name",message);
-        intent.putExtra("ListOfSymptoms",listOfSymptoms);
-        startActivity(intent);
+
 
     }
 }
