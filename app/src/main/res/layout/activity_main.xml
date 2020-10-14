@@ -81,6 +81,7 @@
         android:text="Have you thrown up?"
         android:textColor="#EF0909"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxFive"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewFour" />
 
@@ -186,13 +187,13 @@
 
     <CheckBox
         android:id="@+id/checkBoxFive"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="54dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="34dp"
+        android:layout_height="35dp"
         android:background="#FFEB3B"
+        app:layout_constraintBottom_toTopOf="@+id/editText_main"
         app:layout_constraintEnd_toEndOf="@+id/text_Main"
-        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxFour" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxFour"
+        app:layout_constraintVertical_bias="0.776" />
 </androidx.constraintlayout.widget.ConstraintLayout>
